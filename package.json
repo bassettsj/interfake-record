@@ -1,0 +1,28 @@
+{
+  "name": "interfake-record",
+  "version": "1.0.0",
+  "description": "My good module",
+  "license": "MIT",
+  "repository": "bassettsj/interfake-record",
+  "author": {
+    "name": "Steven Bassett",
+    "email": "steven.j.bassett@gmail.com",
+    "url": "bassettsj.me"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
