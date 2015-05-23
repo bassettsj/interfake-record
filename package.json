@@ -13,16 +13,25 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha"
+    "build": "babel -d ./src ./lib",
+    "watch": "babel -w -d ./src ./lib",
+    "prepublish": "npm run build",
+    "test": "mocha --compilers js:babel/register"
   },
   "files": [
-    "index.js"
+    "lib/index.js"
   ],
   "keywords": [
-    ""
+    "Interfake",
+    "JSON",
+    "testing"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "commander": "^2.8.1"
+  },
   "devDependencies": {
-    "mocha": "*"
+    "babel": "~5.4.7",
+    "mocha": "*",
+    "tap": "^1.1.0"
   }
 }
