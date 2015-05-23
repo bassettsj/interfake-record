@@ -1,15 +1,10 @@
 'use strict';
 
-import url from 'url';
+import Interfake from 'interfake';
 
-export default class InterfakeRecorder {
-  constructor (remoteHost, outputDir) {
-    if (typeof remoteHost !== 'string') {
-      throw new TypeError (`Expected remoteHost to be a string, recieved ${typeof remoteHost}`);
-    }
-    this.remote = url.parse(remoteHost);
+
+export default class InterfakeRecorder extends Interfake {
+  constructor(options) {
+    super(options);
   }
 }
-
-
-console.log(new InterfakeRecorder('http://example.com/foobar?search').remote);

@@ -13,10 +13,12 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "build": "babel -d ./src ./lib",
-    "watch": "babel -w -d ./src ./lib",
+    "build": "babel --optional runtime ./src -d ./lib",
+    "watch": "npm run watch:build && watch:test",
     "prepublish": "npm run build",
-    "test": "mocha --compilers js:babel/register"
+    "test": "mocha --compilers js:babel/register",
+    "watch:test": "mocha --compilers js:babel/register --watch",
+    "start": "npm watch"
   },
   "files": [
     "lib/index.js"
@@ -27,11 +29,13 @@
     "testing"
   ],
   "dependencies": {
-    "commander": "^2.8.1"
+    "babel-runtime": "^5.4.7",
+    "commander": "^2.8.1",
+    "interfake": "^1.13.0"
   },
   "devDependencies": {
     "babel": "~5.4.7",
     "mocha": "*",
-    "tap": "^1.1.0"
+    "chai": "*"
   }
 }
