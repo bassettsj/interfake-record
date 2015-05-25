@@ -31,11 +31,14 @@
   "dependencies": {
     "babel-runtime": "^5.4.7",
     "commander": "^2.8.1",
-    "interfake": "^1.13.0"
+    "interfake": "^1.13.0",
+    "lodash": "^3.9.2"
   },
   "devDependencies": {
     "babel": "~5.4.7",
+    "chai": "*",
     "mocha": "*",
-    "chai": "*"
+    "q": "^1.4.1",
+    "request": "^2.55.0"
   }
 }
